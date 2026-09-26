@@ -37,5 +37,5 @@ jobs:
 
     - name: Run Pytest with Coverage
       env:
-        DATABASE_URL: sqlite+aiosqlite:///:memory:
+        DATABASE_URL: sqlite+aiosqlite://
       run: pytest --cov=src tests/ --cov-report=term-missing
