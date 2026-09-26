@@ -1,0 +1,9 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.idea/
+.pytest_cache/
+.coverage
+static/medias/media_*
+.env

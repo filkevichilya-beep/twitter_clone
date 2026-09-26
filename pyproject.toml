@@ -1,0 +1,35 @@
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "A", "C4", "RUF"]
+ignore = [
+    "E203",
+    "B008",
+    "A002",
+    "RUF002",
+    "RUF003",
+    "UP006",
+    "UP035"
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+strict = true
+ignore_missing_imports = true
+disallow_any_generics = true
+plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.coverage.run]
+omit = [
+    "src/init_db.py"
+]
+
